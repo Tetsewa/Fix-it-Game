@@ -13,10 +13,12 @@ font-family: Kalam;
     border-radius: 8px;
     padding:35px 90px;
     font-size: 2.5rem ;
+    box-shadow: 36px 24px 16px -3px rgba(0,0,0,0.1);
+    border-style: none;
 
 }
 .title{
-    font-size: 3rem;
+    font-size: 300%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +34,7 @@ font-family: Kalam;
     justify-content: center;
      
 }
-.welcome{
+.description {
     display: flex;
     align-items: center;
     justify-content: center; 
