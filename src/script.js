@@ -43,3 +43,8 @@ const spareParts=[
     { name: 'USB-port', img: 'USB-port.jpg' }
 ]
 
+//instantiation
+
+
+//selecting all objects
+startGame=document.querySelector('.start-btn')
