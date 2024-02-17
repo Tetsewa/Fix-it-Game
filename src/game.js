@@ -50,7 +50,7 @@ class Game {
 
         //define the click event in the script.js and call here
 
-        
+
         
     }
 
@@ -65,14 +65,26 @@ class Game {
 
 
 
-        //if each checkCorrectAnswers is true,
+        //else statement: if each checkCorrectAnswers is false
+        this.salary-=10;
+
     }
 
   
 
     endGame(){}
+    //end the game after all 10 questions answered
 
+    //load the screenThree
+    //this.screenThree.style.display = "block";
 
+    //use .TextContent to write 'You Won' or 'You lost' by calling checkIfWon
+
+    //Use innerHTML to display the salary in the 'final-salary' span
+
+    //Use innerHTML to display the number of happy faces in the happy-customers div
+
+    //EXTRA: add a cheers sound
 
 
     //method to restart the game after game ends
