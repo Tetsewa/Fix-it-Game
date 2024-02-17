@@ -38,8 +38,43 @@
         <button class="start-btn">Start</button>
     </div>
 
+    <!-- game container is initially hidden using CSS style display: none-->
+    <div id="game-container">
+        <div>
+            <div class="problem" >
+            <!-- will contain the problems -->
+            </div>
+
+            <div></div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- game end is initially hidden using CSS style display: none-->
+    <div id="game-end">
+        <img class= 'game-over-pic' src="" alt="">
+        <div class="results">
+            <h3>Salary Earned: <span></span></h3>
+            <h3>Customers Satisfied: 
+                <div> 
+                    <!-- this will load the happy customer faces that will be pushed into the array if player answes correctly-->
+                </div>
+            </h3>
+        </div>
+    </div>
     
-    <div></div>
+
+
+    <!-- restart button -->
+    <div>
+        <button id="restart-button">Restart Game</button>
+    </div>
+
+
     <!-- Javascripts linked -->
     <script src = './src/game.js'>  </script>
     <script src = './src/script.js'>  </script>
