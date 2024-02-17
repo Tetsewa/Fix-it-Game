@@ -1,11 +1,9 @@
 body {
 margin: 0px;
-background: url("./images/background\ 2.jpg") no-repeat;
-background-size: cover;
 font-family: Kalam;
 }
 
-.start-btn{
+.start-btn, .restart-btn {
     font-family: Kalam;
     color: white;
     background-color: rgb(214, 151, 69);
@@ -17,6 +15,7 @@ font-family: Kalam;
     border-style: none;
 
 }
+/* can combine with other divs later */
 .title{
     font-size: 300%;
     display: flex;
@@ -38,5 +37,34 @@ font-family: Kalam;
     display: flex;
     align-items: center;
     justify-content: center; 
+}
+#screen-one {
+    background-image:url("./images/background\ 2.jpg");
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+#screen-two, #screen-three {
+    display: none;
+    overflow: hidden;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen-two {
+    background-image: url('./images/Project\ 1\ \ page\ 2.jpg') ;
+    background-size: cover;
+}
+#screen-three {
+    background-image: url('./images/Project\ 1\ final\ page.jpg');
+    background-size: cover;
+}
+
+
+.game-container {
+background-image: url ;
+background-position: center;
 }
 

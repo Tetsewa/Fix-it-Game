@@ -12,71 +12,82 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body id="screen-one">
-    <header>
-     <img src="" alt="">   
-    </header>
-    <div class="title">
-        <h1 class="game-title">Help-Me-Fix-It</h1>
+<body>
+    <div id="screen-one">
+        <header>
+            <img src="" alt="">   
+           </header>
+           <div class="title">
+               <h1 class="game-title">Can You Fix It??</h1>
+           </div>
+           <div class= "description">
+               <p class="welcome">Many customers are calling to report problems with their laptops. 
+                   The goal is to fix the customer’s problem by selecting two parts out of the available parts that are needed to fix the problem described.
+                   <br>
+                   You have a happy customer 😊 if the correct parts are selected to fix the customer's problem.
+                   You also earn 10 euros for fixing the problem!
+                   <br>
+                   On the other hand, wrongly selected parts do not fix the customer’s problem and you have a sad customer😞. You also lose 10 euros for each unhappy customer.
+                   <br>
+                   You win the game if you have at least 7 happy customers!
+                   
+                   Now let’s fix it!!!! 🧑‍💻🔧🪛🔩
+                   </p>
+           </div>>
+       
+           <div class="start">
+               <button class="start-btn">Start</button>
+           </div>
+       
     </div>
-    <div class= "description">
-        <p class="welcome">Many customers are calling to report problems with their laptops. 
-            The goal is to fix the customer’s problem by selecting two parts out of the available parts that are needed to fix the problem described.
-            <br>
-            You have a happy customer 😊 if the correct parts are selected to fix the customer's problem.
-            You also earn 10 euros for fixing the problem!
-            <br>
-            On the other hand, wrongly selected parts do not fix the customer’s problem and you have a sad customer😞. You also lose 10 euros for each unhappy customer.
-            <br>
-            You win the game if you have at least 7 happy customers!
-            
-            Now let’s fix it!!!! 🧑‍💻🔧🪛🔩
-            </p>
-    </div>>
 
-    <div class="start">
-        <button class="start-btn">Start</button>
-    </div>
 
-    <!-- game container is initially hidden using CSS style display: none-->
-    <div id="game-container">
-        <div>
-            <div class="problem" >
-            <!-- will contain the problems -->
+    <!-- screen-two is initially hidden using CSS style display: none-->
+    <div id="screen-two">
+        <div class="game-container">
+            <div class="problem-d.isplayed" >
+            <!-- will contain the problems from the MyQuestions array -->
             </div>
 
-            <div></div>
+            
+            <div class = "all-answers">
+                <!-- will contain the allAnswers from the MyQuestions array   -->
+                
+            </div>
         </div>
     </div>
+    <!-- I would like to display a pop up ✅ when answer is right and ❎  when the answer is wrong. Do i use modals?  -->
 
 
 
-
-
-
-    <!-- game end is initially hidden using CSS style display: none-->
-    <div id="game-end">
-        <img class= 'game-over-pic' src="" alt="">
-        <div class="results">
-            <h3>Salary Earned: <span></span></h3>
-            <h3>Customers Satisfied: 
-                <div> 
-                    <!-- this will load the happy customer faces that will be pushed into the array if player answes correctly-->
-                </div>
-            </h3>
+    <!-- screen-three is initially hidden using CSS style display: none-->
+    <div id="screen-three">
+        
+        <div class="game-over">
+            <h1>GAME OVER !!!</h1>
+            <div>
+                <!-- <h2>Either you won/lost</h2> -->
+            </div>
+            
+            <div class="the-results">
+                <h3>You earned: <span></span> euros </h3>
+            <h3>These customers are happy because of you... </h3>
+            <div class="happy-customers">
+                <!-- will contain the array of happy customers -->
+            </div>
+             <!-- restart button -->
+            <button class="restart -btn">Restart Game</button>
+            </div>
         </div>
     </div>
     
 
 
-    <!-- restart button -->
-    <div>
-        <button id="restart-button">Restart Game</button>
-    </div>
-
 
     <!-- Javascripts linked -->
-    <script src = './src/game.js'>  </script>
-    <script src = './src/script.js'>  </script>
+    <script src = './src/questions.js'></script>
+    <!-- <script src = './src/player.js'></script> -->
+    <script src = './src/game.js'></script>
+    <script src = './src/script.js'></script>
 </body>
 </html>
