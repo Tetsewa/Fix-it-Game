@@ -1,4 +1,4 @@
-export const myQuestions=[
+const myQuestions=[
     {problem:'While closing my laptop, the hinges broke and the screws fell off',  
     allAnswers:['hinges.jpg', 'screws.jpg','motherboard.jpg','hard-disk-drive.jpg'], 
     correctAnswers:['hinges.jpg', 'screws.jpg']},
@@ -44,3 +44,6 @@ export const myQuestions=[
 // const faces=[
 //     {name:'happy-face', img: 'happy-face.jpg'}
 // ]
+
+
+export default myQuestions

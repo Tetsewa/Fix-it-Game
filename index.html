@@ -45,7 +45,7 @@
     <!-- screen-two is initially hidden using CSS style display: none-->
     <div id="screen-two">
         <div class="game-container">
-            <div class="problem-d.isplayed" >
+            <div class="problem-displayed" >
             <!-- will contain the problems from the MyQuestions array -->
             </div>
 
@@ -54,6 +54,11 @@
                 <!-- will contain the allAnswers from the MyQuestions array   -->
                 
             </div>
+
+
+             <div class="next">
+               <button class="next-btn">Next</button>
+           </div>
         </div>
     </div>
     <!-- I would like to display a pop up ✅ when answer is right and ❎  when the answer is wrong. Do i use modals?  -->
@@ -85,9 +90,13 @@
 
 
     <!-- Javascripts linked -->
-    <script src = './src/questions.js'></script>
-    <!-- <script src = './src/player.js'></script> -->
-    <script src = './src/game.js'></script>
-    <script src = './src/script.js'></script>
+    <!-- <script src = './src/questions.js' type="module"></script>
+    <script src ='./src/game.js' type="module"></script>
+    <script src ='./src/script.js' type="module"></script> -->
+
+    <!-- This are the test one we will link -->
+    <script src="./js/questions.js" type="module" defer></script>
+    <script src="./js/game.js" type="module" ></script>
+    <script src="./js/index.js" type="module" defer></script>
 </body>
 </html>

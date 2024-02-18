@@ -1,13 +1,18 @@
+import { Game } from "./game";
+
+
+
+
 
 //instantiation
-const fixItGame = new Game();
+//const fixItGame = new Game();
 
-let isProcessing=false;
+//let isProcessing=false;
 
 window.addEventListener('load', () => {
     const startButton = document.querySelector('.start-btn')
 
-    //const fixItGame = new Game();
+    const fixItGame = new Game();
 
     startButton.addEventListener('click', () => {
         fixItGame.startGame()

@@ -1,5 +1,6 @@
+// import { myQuestions } from "./questions";
 
-class Game {
+export class Game {
     constructor(){
         this.screenOne = document.querySelector('#screen-one');
         this.screenTwo = document.querySelector('#screen-two');
@@ -12,9 +13,7 @@ class Game {
 
     }
 
-
-    problemDisplayed=document.querySelector('.problem-displayed');
-
+    
 
 //defining the method to start the game
     startGame(){
@@ -29,17 +28,32 @@ class Game {
 
         //loadProblem(element);
 
+        this.loadProblems();
+        this.loadAllAnswers();
+
         //OR
         // this.myQuestions.forEach((element )=> {
         //     html= `<h3> ${this.myQuestions[i].problem}</h3>`
         // });
         // problemDisplayed.innerHTML = html
     
+   
+
         //load allAnswers for that problem
         //loadAllAnswers
 
         
     }
+
+
+         loadProblems(){
+            let html = "";
+            this.myQuestions.forEach((question, index) => {
+                html += `<h3> ${index + 1}. ${question.problem} </h3>`
+            });
+
+            this.problemDisplayed.innerHTML = html;
+        }
     
    
 

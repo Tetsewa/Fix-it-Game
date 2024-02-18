@@ -43,6 +43,7 @@ font-family: Kalam;
     background-size: cover;
     background-position: center;
     display: block;
+    height: 100vh
 }
 
 #screen-two, #screen-three {
@@ -56,6 +57,7 @@ font-family: Kalam;
 #screen-two {
     background-image: url('./images/Project\ 1\ \ page\ 2.jpg') ;
     background-size: cover;
+    
 }
 #screen-three {
     background-image: url('./images/Project\ 1\ final\ page.jpg');
@@ -64,7 +66,11 @@ font-family: Kalam;
 
 
 .game-container {
-background-image: url ;
+/* background-image: url ; */
 background-position: center;
+margin: 10px;
 }
+
+
+
 
