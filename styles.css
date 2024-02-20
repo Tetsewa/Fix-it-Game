@@ -23,9 +23,19 @@ font-family: Kalam;
     justify-content: center;
 
 }
+.welcome{
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    border-style: outset;
+    border-color: black;
+    font-weight: bold;
+}
 .game-title {
     color: rgb(247, 243, 243);
     margin-bottom: 0px;
+    margin-top: 10px;
 }
 .start{
     display: flex;
@@ -99,3 +109,12 @@ margin: 10px;
     align-items: center;
     justify-content: center;
 }
+.the-results {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    flex-direction: column; 
+    color: whitesmoke;
+    
+}
+    

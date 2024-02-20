@@ -114,8 +114,17 @@ class Game {
     endGame() {
         this.screenTwo.style.display = "none"
         this.screenThree.style.display = "block";
-        document.querySelector('.final-salary').textContent=this.score
+        //display the final score
+        document.querySelector('.final-score').textContent=this.score;
         
+        //  Winning condition
+        if(this.score >= 70){
+            
+            //document.querySelector('.status').innerHTML="YOU DID IT!!!🎉"
+        }
+        else if (this.score < 70){
+            //document.querySelector('.status').innerHTML="TRY HARDER NEXT TIME!!!"
+        }  
     }
 
 
