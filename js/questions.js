@@ -40,10 +40,7 @@ const myQuestions=[
     correctAnswers: ['USB-port.jpg','mouse.jpg']},
 ]
 
-//I don't need the array of faces
-// const faces=[
-//     {name:'happy-face', img: 'happy-face.jpg'}
-// ]
+
 
 
 export default myQuestions

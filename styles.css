@@ -13,7 +13,12 @@ font-family: Kalam;
     font-size: 2.5rem ;
     box-shadow: 36px 24px 16px -3px rgba(0,0,0,0.1);
     border-style: none;
-
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+}
+.start-btn{
+    transition: all 0.3s ease-in-out 0s;
 }
 /* can combine with other divs later */
 .title{
@@ -31,6 +36,7 @@ font-family: Kalam;
     border-style: outset;
     border-color: black;
     font-weight: bold;
+    text-align: center;
 }
 .game-title {
     color: rgb(247, 243, 243);

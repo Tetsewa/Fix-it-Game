@@ -112,19 +112,24 @@ class Game {
     }
 
     endGame() {
+        //  Winning condition
+        if(this.score >= 70){
+            window.alert("CONGRATULATIONS! YOU DID IT!!!🎉")
+            //document.querySelector('.status').innerHTML="YOU DID IT!!!🎉"
+        }
+        //losing condition
+        else {
+            window.alert("YOU LOST. TRY HARDER NEXT TIME!!!")
+            //document.querySelector('.status').innerHTML="TRY HARDER NEXT TIME!!!"
+        }  
+
+        //hide screen two and display screen three
         this.screenTwo.style.display = "none"
         this.screenThree.style.display = "block";
         //display the final score
         document.querySelector('.final-score').textContent=this.score;
         
-        //  Winning condition
-        if(this.score >= 70){
-            
-            //document.querySelector('.status').innerHTML="YOU DID IT!!!🎉"
-        }
-        else if (this.score < 70){
-            //document.querySelector('.status').innerHTML="TRY HARDER NEXT TIME!!!"
-        }  
+        
     }
 
 
