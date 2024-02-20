@@ -54,15 +54,12 @@ font-family: Kalam;
     align-items: center;
 }
 
-#screen-two {
+#screen-two, #screen-three {
     background-image: url('./images/Project\ 1\ \ page\ 2.jpg') ;
     background-size: cover;
     
 }
-#screen-three {
-    background-image: url('./images/Project\ 1\ final\ page.jpg');
-    background-size: cover;
-}
+
 
 
 .game-container {
@@ -73,12 +70,32 @@ margin: 10px;
 .problem-displayed{
     display: flex;
     justify-content: center;
+    margin: 70px 0px 50px 0px;
+    
+    
+}
+
+.the-problem{
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 
-
-
 .score{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
     width: 10%;
+    
+}
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.all-answers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -6,11 +6,11 @@ class Game {
         this.screenTwo = document.querySelector('#screen-two');
         this.screenThree = document.querySelector('#screen-three');
         this.startBtn = document.querySelector('.start-btn');
-        this.nextBtn = document.querySelector('.next-btn');
         this.problemDisplayed = document.querySelector('.problem-displayed')
         this.answersDisplayed = document.querySelector('.all-answers')
         this.scoreBoard = document.querySelector(".score")
         this.clickedImages = []
+        this.restartButton = document.querySelector(".restart-btn")
 
         //  keep track of questions
         this.currentQuestionIndex = 0
@@ -21,8 +21,9 @@ class Game {
         // Add event listener to the start button
         this.startBtn.addEventListener('click', () => this.startGame());
 
-        // Add event listener to the next button
-        this.nextBtn.addEventListener('click', () => this.loadNextQuestion());
+
+        // Add event listener to the restart button
+        this.restartButton.addEventListener('click', () => this.restartGame());
     }
 
     startGame() {
@@ -33,8 +34,10 @@ class Game {
     }
 
     displayQuestion(question) {
-        const html = `<h3> Customer ${this.currentQuestionIndex + 1}: ${question.problem} </h3>`;
+        const html = `<h3 class='the-problem'> Customer ${this.currentQuestionIndex + 1}: ${question.problem} </h3>`;
         this.problemDisplayed.innerHTML = html;
+        
+
     }
 
     displayAnswers(answers) {
@@ -68,6 +71,7 @@ class Game {
 
         if (this.clickedImages.length === 2) {
             const answers = myQuestions[this.currentQuestionIndex - 1].correctAnswers;
+            // to check for the images clicked if correct
             const isCorrect = this.clickedImages.every((clickedImage) => answers.includes(clickedImage));
 
             if (isCorrect) {
@@ -109,9 +113,20 @@ class Game {
 
     endGame() {
         this.screenTwo.style.display = "none"
-        this.screenThree.style.display = "block"
+        this.screenThree.style.display = "block";
+        document.querySelector('.final-salary').textContent=this.score
         
+    }
+
+
+// restarts game-the score is not resetting to zero!
+    restartGame(){
+        this.currentQuestionIndex = 0;
+        this.score = 0;
+        this.answersDisplayed.innerHTML = "";
+        this.scoreBoard.textContent = this.score
+        this.startGame()
     }
 }
 
-const game = new Game()
+const game = new Game()  

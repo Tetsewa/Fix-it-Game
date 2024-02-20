@@ -1,5 +1,5 @@
-import Game from "./game.js";
+//import Game from "./game.js";
 
 
-const game = new Game()
+//const game = new Game()
 
