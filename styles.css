@@ -3,7 +3,7 @@ margin: 0px;
 font-family: Kalam;
 }
 
-.start-btn, .restart-btn, .next-btn {
+.start-btn, .restart-btn, .next-btn, .score {
     font-family: Kalam;
     color: white;
     background-color: rgb(214, 151, 69);
@@ -66,11 +66,19 @@ font-family: Kalam;
 
 
 .game-container {
-/* background-image: url ; */
 background-position: center;
 margin: 10px;
+}
+
+.problem-displayed{
+    display: flex;
+    justify-content: center;
 }
 
 
 
 
+.score{
+    display: inline-block;
+    width: 10%;
+}

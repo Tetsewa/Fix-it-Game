@@ -1,5 +1,5 @@
 const myQuestions=[
-    {problem:'While closing my laptop, the hinges broke and the screws fell off',  
+    {problem:'While closing my laptop, the hinges broke and the screws fell off ',  
     allAnswers:['screws.jpg','motherboard.jpg','hard-disk-drive.jpg','hinges.jpg'], 
     correctAnswers:['hinges.jpg', 'screws.jpg']},
 
