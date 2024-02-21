@@ -126,4 +126,9 @@ margin: 10px;
 .description{
     margin-bottom: 0px;
 }
+.final-status{
+    background-color: rgb(214, 151, 69);
+    padding:35px 90px;
+    border-radius: 4px;
+}
     

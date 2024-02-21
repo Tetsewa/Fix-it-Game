@@ -11,7 +11,7 @@ class Game {
         this.scoreBoard = document.querySelector(".score")
         this.clickedImages = []
         this.restartButton = document.querySelector(".restart-btn")
-        this.status = document.querySelector('.status');
+        this.status = document.querySelector('.final-status');
 
         //  keep track of questions
         this.currentQuestionIndex = 0
@@ -116,12 +116,12 @@ class Game {
         //  Winning condition
         if(this.score >= 70){
             //window.alert("CONGRATULATIONS! YOU DID IT!!!🎉")
-            this.status.textContent=`YOU DID IT!!!🎉`
+            this.status.textContent=`YOU DID IT!!!🎉 CONGRATULATIONS`
         }
         //losing condition
         else {
             //window.alert("YOU LOST. TRY HARDER NEXT TIME!!!")
-            document.querySelector('.status').textContent=`TRY HARDER NEXT TIME!!!`
+            this.status.textContent = `YOU LOST!!! TRY HARDER NEXT TIME!!!`
         }  
 
         //hide screen two and display screen three
