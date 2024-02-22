@@ -96,7 +96,7 @@ class Game {
             }else{
                 //play wrong sound
                 document.getElementById("play-wrong").play();
-                
+
                 this.loadNextQuestion()
             }
 
@@ -154,7 +154,10 @@ class Game {
         }
         //losing condition
         else {
+            //play wah-wah audio
+            document.getElementById("wah-wah").play();
             
+            //display status message 
             this.status.textContent = `YOU LOST!!!`
             this.happyText.textContent = `Many customers are sad😞😞😞!!!`
             this.happyCustomers.innerHTML=``
@@ -177,6 +180,7 @@ class Game {
         this.answersDisplayed.innerHTML = "";
         this.scoreBoard.textContent = this.score
         this.happyFaceArray = [];
+        this.happyCustomers.innerHTML=``
         this.startGame()
     }
 }
