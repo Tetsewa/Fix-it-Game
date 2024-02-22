@@ -12,6 +12,10 @@ class Game {
         this.clickedImages = []
         this.restartButton = document.querySelector(".restart-btn")
         this.status = document.querySelector('.final-status');
+        this.happyFaceArray = [];
+        //this.happyFace = './images/happy-face.png'
+        this.happyCustomers = document.querySelector('.happy-customers')
+        this.happyText = document.querySelector('.happy-text')
 
         //  keep track of questions
         this.currentQuestionIndex = 0
@@ -76,8 +80,14 @@ class Game {
             const isCorrect = this.clickedImages.every((clickedImage) => answers.includes(clickedImage));
 
             if (isCorrect) {
+                //adds 10 to the player's score
                 this.score += 10
-                this.scoreBoard.textContent = this.score
+                //displays the current score
+                this.scoreBoard.textContent = this.score;
+
+                //displays a happy face if the answer is correct
+                this.happyFaceArray.push(this.happyFace);
+
 
                 this.loadNextQuestion()
             }else{
@@ -115,13 +125,31 @@ class Game {
     endGame() {
         //  Winning condition
         if(this.score >= 70){
-            //window.alert("CONGRATULATIONS! YOU DID IT!!!🎉")
-            this.status.textContent=`YOU DID IT!!!🎉 CONGRATULATIONS`
+            
+            this.status.textContent = `YOU DID IT!!!🎉😊 CONGRATULATIONS`
+            this.happyText.textContent = `And these customers are happy because of you!!!`
+            
+
+            this.happyFaceArray.forEach((score) => {
+
+            //create the happy face and append one for each correct answer
+            let happyDiv = document.createElement('img');
+            happyDiv.src = `./images/happy-face.png`;
+            happyDiv.classList.add('smiley');
+            this.happyCustomers.appendChild(happyDiv);
+                
+            // CSS styling
+            happyDiv.style.width = "80px";
+            happyDiv.style.height = "80px";
+            })
+
         }
         //losing condition
         else {
-            //window.alert("YOU LOST. TRY HARDER NEXT TIME!!!")
-            this.status.textContent = `YOU LOST!!! TRY HARDER NEXT TIME!!!`
+            
+            this.status.textContent = `YOU LOST!!!`
+            this.happyText.textContent = `Many customers are sad😞😞😞!!!`
+            this.happyCustomers.innerHTML=``
         }  
 
         //hide screen two and display screen three
@@ -140,6 +168,7 @@ class Game {
         this.score = 0;
         this.answersDisplayed.innerHTML = "";
         this.scoreBoard.textContent = this.score
+        this.happyFaceArray = [];
         this.startGame()
     }
 }

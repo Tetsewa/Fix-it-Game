@@ -22,16 +22,16 @@
            <div class= "description">
                <p class="welcome">Many customers are calling to report problems with their laptops. 
                 <br>
-                   You have been tasked to fix the customer’s problem by selecting two parts out of the available parts that are needed to fix the problem described.
+                   You have been tasked to fix the customer’s problem by selecting <span class="highlight">2</span> parts out of the available parts that are needed to fix the problem described.
                    <br>
                    You have a happy customer 😊 if the correct parts are selected to fix the customer's problem.
                    <br>
-                   You also earn 10 coins 🪙 for fixing each problem!
+                   You also earn <span class="highlight">10</span> coins 🪙 for fixing each problem!
                    <br>
                    On the other hand, wrongly selected parts do not fix the customer’s problem and you have a sad customer😞. 
-                   <br>You also lose 10 coins 🪙 for each unhappy customer.
+                   <br>You also lose <span class="highlight">10</span> coins 🪙 for each unhappy customer.
                    <br>
-                   You win the game if you have at least 7 happy customers!
+                   You win the game if you have at least <span class="highlight">7</span> happy customers!
                    
                    Now let’s fix it!!!! 🧑‍💻🔧🪛🔩
                 </p>
@@ -51,6 +51,8 @@
             <!-- will contain the problems from the MyQuestions array -->
             </div>
 
+            <article class="note"><p>*Select 2 Parts</p></article>
+
             
             <div class = "all-answers">
                 <!-- will contain the allAnswers from the MyQuestions array   -->
@@ -64,7 +66,7 @@
            </div>
         </div>
     </div>
-    <!-- I would like to display a pop up ✅ when answer is right and ❎  when the answer is wrong. Do i use modals?  -->
+    
 
 
 
@@ -78,12 +80,14 @@
             </div>
             
             <h3>You earned: <span class="final-score"></span> coins! </h3>
-            <h3>These customers are happy because of you... </h3>
+            <h3 class="happy-text">
+                <!-- will contain some text based on win/lose -->
+            </h3>
             <div class="happy-customers">
             <!-- will contain the array of happy customers -->
             </div>
          <!-- restart button -->
-            <button class="restart-btn">Restart Game</button>
+            <button class="restart-btn">Play Again</button>
         </div>
     </div>
     

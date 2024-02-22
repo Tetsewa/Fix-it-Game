@@ -17,9 +17,12 @@ font-family: Kalam;
     outline: none;
     text-transform: uppercase;
 }
-.start-btn{
-    transition: all 0.3s ease-in-out 0s;
+
+.restart-btn{
+    padding:20px 30px;
+    margin-top: 30px;
 }
+
 /* can combine with other divs later */
 .title{
     font-size: 300%;
@@ -43,11 +46,15 @@ font-family: Kalam;
     margin-bottom: 0px;
     margin-top: 10px;
 }
-.start{
+.start {
     display: flex;
     align-items: center;
     justify-content: center;
      
+}
+.highlight {
+    font-size: larger;
+    text-decoration: underline;
 }
 .description {
     display: flex;
@@ -76,7 +83,12 @@ font-family: Kalam;
     
 }
 
-
+.note{
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+}
 
 .game-container {
 background-position: center;
@@ -86,8 +98,7 @@ margin: 10px;
 .problem-displayed{
     display: flex;
     justify-content: center;
-    margin: 70px 0px 50px 0px;
-    
+    margin: 70px 0px 20px 0px;
     
 }
 
@@ -95,6 +106,9 @@ margin: 10px;
     background-color: white;
     padding: 10px;
     border-radius: 8px;
+    border-style: outset;
+    border-color: gray;
+    font-size: 1.5rem;
 }
 
 
@@ -103,6 +117,7 @@ margin: 10px;
     align-items: center;
     justify-content: center; 
     width: 10%;
+    margin-top: 20px;
     
 }
 .status{
