@@ -6,7 +6,7 @@
     <title>Fix-It-Game</title>
 
     <!-- CSS linked -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <!-- Google fonts linked -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,25 +20,24 @@
                <h1 class="game-title">Can You Fix It??</h1>
            </div>
            <div class= "description">
-               <p class="welcome">Many customers are calling to report problems with their laptops. 
+               <p class="welcome">Today you have <span class="highlight">10</span> customers calling 📞 to report various problems with their computers. 
                 <br>
-                   You have been tasked to fix the customer’s problem by selecting <span class="highlight">2</span> parts out of the available parts that are needed to fix the problem described.
+                   You have been tasked to fix these customers' problems by selecting <span class="highlight">2</span> parts out of the available parts that should fix the problem described.
                    <br>
-                   You have a happy customer 😊 if the correct parts are selected to fix the customer's problem.
+                   You have a happy customer 😊 if the correct parts are selected to fix the customers' problem.
                    <br>
                    You also earn <span class="highlight">10</span> coins 🪙 for fixing each problem!
                    <br>
-                   On the other hand, wrongly selected parts do not fix the customer’s problem and you have a sad customer😞. 
-                   <br>You also lose <span class="highlight">10</span> coins 🪙 for each unhappy customer.
+                   On the other hand, wrongly selected parts do not fix the customers' problem and you have a sad customer😞. 
                    <br>
                    You win the game if you have at least <span class="highlight">7</span> happy customers!
                    
-                   Now let’s fix it!!!! 🧑‍💻🔧🪛🔩
+                   Now.... let’s fix it!!!! 🧑‍💻🔧🪛🔩
                 </p>
            </div>>
        
            <div class="start">
-               <button class="start-btn">Start</button>
+               <button class="start-btn pulse">Start</button>
            </div>
        
     </div>
@@ -62,7 +61,7 @@
           
              <div class="status">
 
-               <p class="score">0</p>
+               <p class="score pulse">0</p>
            </div>
         </div>
     </div>
@@ -74,9 +73,9 @@
     <div id="screen-three">
         
         <div class="the-results">
-            <h1>GAME OVER !!!</h1>
+            <h1 class="bigger">GAME OVER !!!</h1>
             <div >
-            <h1 class="final-status"> </h1>
+            <h1 class="final-status pulse"> </h1>
             </div>
             
             <h3>You earned: <span class="final-score"></span> coins! </h3>
@@ -87,7 +86,7 @@
             <!-- will contain the array of happy customers -->
             </div>
          <!-- restart button -->
-            <button class="restart-btn">Play Again</button>
+            <button class="restart-btn pulse">Play Again</button>
         </div>
     </div>
     <!-- audio clips -->

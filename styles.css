@@ -23,7 +23,6 @@ font-family: Kalam;
     margin-top: 30px;
 }
 
-/* can combine with other divs later */
 .title{
     font-size: 300%;
     display: flex;
@@ -145,19 +144,26 @@ margin: 10px;
     background-color: rgb(214, 151, 69);
     padding:35px 90px;
     border-radius: 4px;
-    animation: pulsate 10s ease-out;
-    animation-iteration-count: infinite; 
-    opacity: 1;
+    font-size: 3em;
+
 }
-@keyframes final-status {
-    0% { 
-        opacity: 0.5;
-    }
-    50% { 
-        opacity: 1.0;
-    }
-    100% { 
-        opacity: 0.5;
-    }
+.bigger{
+    font-size: 3em;
 }
-    
+.the-results h3{
+    font-size: 2em;
+    margin: 5px 0px;
+}
+
+.pulse {
+    animation: pulse-animation 10s infinite;
+  }
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(136, 133, 133, 0);
+    }
+  }
+  

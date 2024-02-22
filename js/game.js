@@ -173,7 +173,7 @@ class Game {
     }
 
 
-// restarts game-the score is not resetting to zero!
+// restarts game
     restartGame(){
         this.currentQuestionIndex = 0;
         this.score = 0;
