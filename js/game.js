@@ -80,17 +80,23 @@ class Game {
             const isCorrect = this.clickedImages.every((clickedImage) => answers.includes(clickedImage));
 
             if (isCorrect) {
-                //adds 10 to the player's score
+                //play correct sound
+                document.getElementById("play-correct").play();
+
+                //add 10 to the player's score
                 this.score += 10
-                //displays the current score
+                //display the current score
                 this.scoreBoard.textContent = this.score;
 
                 //displays a happy face if the answer is correct
                 this.happyFaceArray.push(this.happyFace);
-
+                
 
                 this.loadNextQuestion()
             }else{
+                //play wrong sound
+                document.getElementById("play-wrong").play();
+                
                 this.loadNextQuestion()
             }
 
@@ -125,18 +131,20 @@ class Game {
     endGame() {
         //  Winning condition
         if(this.score >= 70){
-            
+            //play crowd cheer audio
+            document.getElementById("crowd-cheer").play();
+
+            //display status message 
             this.status.textContent = `YOU DID IT!!!🎉😊 CONGRATULATIONS`
             this.happyText.textContent = `And these customers are happy because of you!!!`
             
-
+            //create the happy face and append one for each correct answer
             this.happyFaceArray.forEach((score) => {
 
-            //create the happy face and append one for each correct answer
-            let happyDiv = document.createElement('img');
-            happyDiv.src = `./images/happy-face.png`;
-            happyDiv.classList.add('smiley');
-            this.happyCustomers.appendChild(happyDiv);
+                let happyDiv = document.createElement('img');
+                happyDiv.src = `./images/happy-face.png`;
+                happyDiv.classList.add('smiley');
+                this.happyCustomers.appendChild(happyDiv);
                 
             // CSS styling
             happyDiv.style.width = "80px";
