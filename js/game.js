@@ -67,7 +67,10 @@ class Game {
             this.answersDisplayed.appendChild(imgElement);
 
             // Add event listener to handle image click
-            imgElement.addEventListener('click', () => this.handleImageClick(imgElement));
+            imgElement.addEventListener('click', () => {
+                this.handleImageClick(imgElement)
+                imgElement.style.opacity = 0.5
+            });
         });
     }
     //method to determine which images should be clicked as correct answers
@@ -80,8 +83,14 @@ class Game {
         //to make sure 2 images are clicked
         if (this.clickedImages.length === 2) {
             const answers = myQuestions[this.currentQuestionIndex - 1].correctAnswers;
+            console.log(answers);
+            console.log(this.clickedImages);
+
             // to check for the images clicked if correct
-            const isCorrect = this.clickedImages.every((clickedImage) => answers.includes(clickedImage));
+            // const isCorrect = this.clickedImages.every((clickedImage) => answers.includes(clickedImage));
+
+            const isCorrect = this.clickedImages.every((clickedImage) => answers.includes(clickedImage)) && answers.every((answer) => this.clickedImages.includes(answer));
+
 
             if (isCorrect) {
                 //play correct sound
@@ -96,13 +105,13 @@ class Game {
                 this.happyFaceArray.push(this.happyFace);
                 
 
-                this.loadNextQuestion();
+                   setTimeout( this.loadNextQuestion.bind(this), 1000)
 
             }else{
                 //play wrong sound
                 document.getElementById("play-wrong").play();
 
-                this.loadNextQuestion();
+               setTimeout( this.loadNextQuestion.bind(this), 1000)
             }
 
             // Reset the clicked Images array to empty for the next comparison
