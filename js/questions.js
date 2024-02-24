@@ -1,11 +1,13 @@
 const myQuestions=[
-    {problem:'While closing my computer, the hinges broke and the screws fell off ',  
-    allAnswers:['screws.jpg','motherboard.jpg','hard-disk-drive.jpg','hinges.jpg'], 
-    correctAnswers:['hinges.jpg', 'screws.jpg']},
-
+    
     {problem:'My computer does not start',  
     allAnswers:['charger.jpg','speakers.jpg','motherboard.jpg','camera-board.jpg'], 
     correctAnswers:['motherboard.jpg', 'charger.jpg']},
+
+    {problem:'While trying to close my computer, I heard a crack sound so it cannot open or close anymore ',  
+    allAnswers:['screws.jpg','motherboard.jpg','hard-disk-drive.jpg','hinges.jpg'], 
+    correctAnswers:['hinges.jpg', 'screws.jpg']},
+
 
     {problem:'My computer fell down, the screen is cracked',  
     allAnswers:['LCD-cover.jpg','screen.jpg','speakers.jpg','hard-disk-drive.jpg'], 
